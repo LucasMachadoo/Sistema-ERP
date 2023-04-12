@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body{
+background-color: #f6f9ff;
+}
+main{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.login{
+  width: 360px;
+  height: min-content;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 9px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  font-family: 'Inter', sans-serif;
+
+}
+.login img {
+  width: 17rem;
+  margin: 20px;
+}
+.login h1{
+  font-size: 30px;
+  display: grid;
+  place-items: center;
+}
+.login form{
+  font-size: 20px; 
+}
+.login form .form-group{
+  margin-bottom: 12px;
+}
+.login form input[type="submit"] {
+font-size:20px;
+margin-top: 15px;
+}
+.login form a{
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+.shape1{
+  position: absolute;
+  width: 132px;
+  height: 132px;
+  left: 42rem;
+  top: 18%;
+  border-radius: 25px;
+  transform: rotate(-36.07deg);
+  background: linear-gradient(241.16deg, #002C39 -21.06%, #024F63 -12.42%, #00FEBA 85.94%);
+}
+.shape2{
+position: absolute;
+width: 132px;
+height: 132px;
+left: 66rem;
+top: 70%;
+border-radius: 25px;
+
+background: linear-gradient(241.16deg, #002C39 -21.06%, #024F63 -12.42%, #00FEBA 85.94%);
+transform: rotate(-5.07deg);
+}
+.link-esqueceu{
+display: grid;
+place-items: center;
+padding-top: 15px;
+}
+.cor-botao{
+  background: linear-gradient(241.16deg, #002C39 -21.06%, #024F63 -12.42%, #00FEBA 85.94%);
+  color: #f9f6f6;
+  border: none;
+}
+.cnpj-size,senha-size{
+  font-size: 17px;
+}
+input {
+  border-radius: 0;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.lnr-eye {
+  position: absolute;
+  top: 360px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.cor-botao:hover{
+
+  box-shadow:  20px 20px 60px #cecece,
+             -20px -20px 60px #f2f2f2;
+}
+.botao-check{
+  background-color: #024F63;
+}
+
+/* hovers e animaçoes */
+
+
+.login form a:hover{
+  color:#247BA0;
+}
+
+
+/* If the screen size is 600px wide or less, hide the element */
+/*shape1*/
+@media screen and (max-width: 600px) {
+  .shape1  {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .shape1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .shape1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .shape1 {
+    display: none;
+  }
+}
+/*shape2*/
+
+@media screen and (max-width: 600px) {
+  .shape2  {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .shape2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .shape2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .shape2 {
+    display: none;
+  }
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login - AuroraOne</title>
+     <!--FAVICON-->
+     <link rel="icon" type="image/x-icon" href="assets/img/favi-icon.png">
+      <!--recaptch-->
+     <!--bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--css-->
+    <link rel="stylesheet" href="assets/css/login.css">
+    <!--icones-->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+   <!--js-->
+   <script type="text/javascript" src="assets/js/"></script>
+
+  </head>
+  <body>
+    <main>
+      <div class="shape1 "></div>
+      <div class="shape2 "></div>
+      <div class="login">
+          <img src="assets/img/logotipo.png" class="logo-aurora" alt="logo">
+          <h1 class="">Seja bem vindo!</h1>
+          <form>
+              <div class="form-group">
+                <label class="form-label cnpj-size" for="email"> CNPJ:</label>
+                <input  class="form-control border border-success p-2 mb-2 border-opacity-50" placeholder="00.000.0000-20" id="edit1" value="" size="5" maxlength="14"  type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+              </div>
+                
+              <div class="form-group">
+                  <label class="form-label cnpj-size" name="password" for="password">SENHA: </label>
+                  <input class="form-control ls-for border border-success p-2 mb-2 border-opacity-50" type="password" id="password">
+                
+              </div>
+
+              <div class="form-check form-switch">
+                <input class="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label  " for="flexSwitchCheckDefault">Manter Conectado </label>
+              </div>
+
+              <input class="btn w-100 cor-botao  " type="submit" value="Entrar"> 
+
+          
+
+              <div class="link-esqueceu" >
+                  <a href="#">ESQUECEU A SENHA? CLIQUE AQUI !</a>
+              </div>
+          </form>
+          
+      </div>
+    </main>   
+    <footer>
+        <div class="container">
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted cor-footer ">© 2022 AuroraOne tecnologia</p>
+        
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+              <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+        
+            <ul class="nav col-md-4 justify-content-end ">
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Produtos</a></li>
+            </ul>
+          </footer>
+        </div> 
+    </footer>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>

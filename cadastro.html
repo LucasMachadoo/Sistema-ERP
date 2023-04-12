@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro - AuroraOne</title>
+     <!--FAVICON-->
+    <link rel="icon" type="image/x-icon" href="assets/img/favi-icon.png">
+    <!--bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--css-->
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--icones-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">   <!--js-->
+   <script type="text/javascript" src="assets/js/cadastro.js"></script>
+<body>
+    <main>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <div class="cadastro .container-sm">
+        <div class="position-relative m-4">
+      <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 1px;">
+        <div class="progress-bar" style="width: 50%"></div>
+      </div>
+      
+        <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">1</button>
+        <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">2</button>
+        <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem;">3</button>
+    
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+          <form class="row g-3 ">
+            
+            <div class=" form-group col-md-6">
+              <label for="inputEmail4" class="form-label">Razão social: <b>*</b></label>
+              <input  type="email" class="form-control" id="razao" placeholder="Preenchimento Automático" type="text" name="razao" size="35" maxlength="50" id="inputEmail4" aria-label="Disabled input example" disabled readonly>
+            </div>
+
+            <div class="form-group col-md-6">
+              <div>
+                <label class="form-label cnpj-size" for="cnpj"> CNPJ:<b>*</b> </label>
+                <input  class="form-control" placeholder=" 00.00.000/0001-00" type="tex" id="cnpj" value="" name="cnpj" size="5" maxlength="14"  type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1'); "required  />
+            </div>
+
+            </div>
+            <div class="form-group d-md-flex justify-content-md-end pesquisar">
+              <button class="btn btn-primary  " id="pesquisar" type="button" name="pesqui" ><i class="bi bi-search"></i> Pesquisar</button>
+            </div>
+          
+              <div class=" form-group col-md-6">
+                <label for="inputEmail4" class="form-label is-valid">Nome fantasia: </label>
+                <input type="email" class="form-control" id="validationServer01" type="text" name="nome" size="35" maxlength="50 "required >
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">Estado: <b>*</b></label>
+                <select  id="uf" class="form-select" aria-label="Disabled input example" >
+                  <option selected></option>
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+  
+                </select>
+              </div>
+  
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">CEP:<b>*</b></label>
+                <input type="text" class="form-control"  name="cnpj" size="5" maxlength="8"  type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1'); "required >
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label cnpj-size " for="logradouro">Logradouro:</label><br/>
+                <input id="logradouro" class="form-control"  type="text" name="Logradouro" size="35" maxlength="50"><br/><br/>
+              </div>
+
+              <div class="col-md-4">
+                <label for="inputcity" class="form-label">municipio:<b>*</b></label>
+                <input type="text" class="form-control"  name="cidade" size="5" maxlength="8"  type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1'); "required >
+              </div>
+
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">Número:<b>*</b></label>
+                <input type="text" class="form-control"  name="cnpj" size="5" maxlength="8"  type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1'); "required >
+              </div>
+
+              <hr class="hr hr-blurry" />
+
+              <div class="col-6">
+                <label for="inputAddress" class="form-label">Telefone: <b>*</b></label>
+                <input class="form-control" type="tel" id="telefone" class="input-padrao" required placeholder="(xx) xxxxx-xxxx" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1'); "required >
+              </div>
+  
+             <div class="col-6">
+                <label for="inputAddress" class="form-label">Telefone 2:</label>
+                <input class="form-control" type="tel" id="telefone" class="input-padrao" required placeholder="(xx) xxxxx-xxxx" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1'); " >
+              </div>
+              
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Senha: <b>*</b></label>
+                <input type="password" class="form-control" id="inputPassword4"required >
+              </div>
+  
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label"> Confirmar Senha: <b>*</b></label>
+                <input type="password" class="form-control" id="inputPassword4"required >
+              </div>
+              <!-- Button modal -->
+              <div class="d-grid gap-2 d-md-block">
+                <button type="button" class="btn btn-primary form-group d-grid gap-2 d-md-flex " data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-exclamation-circle"></i>
+                  Termos e condições
+                </button>
+              </div>
+              
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Termos e Condições</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      1. Definições iniciais
+
+                      1.1. Para o perfeito entendimento e interpretação do Termo de Uso e seu Anexo de Proteção de Dados, fica estabelecido que:
+                      
+                      1.1.1. LICENCIANTE: OTIMIZY SISTEMAS INTELIGENTES LTDA, pessoa jurídica de direito privado, com sede na cidade de Garibaldi, Rio Grande do Sul, na Avenida Perimetral Léo Antônio Cisilotto, 938 – Sala 5, Bairro São José, CEP 95.720-000, inscrita no CNPJ sob o número 11.509.962/0001-97.
+                      
+                      1.1.2. LICENCIADO: VOCÊ, usuário do sistema (pessoa física ou jurídica) que tenha permissão para utilizar os serviços do SOFTWARE
+                      
+                      1.1.3. SOFTWARE: software de propriedade exclusiva da LICENCIANTE, cujas funcionalidades e serviços estão disponibilizados pelo site “www.erpsoft.com.br”, por meio do qual as INFORMAÇÕES do LICENCIADO serão fornecidas diretamente por ele ou coletadas diretamente nos sites das instituições de maneira automatizada.
+                      
+                      1.1.4. API: Application Programming Interface que em português significa Interface de Programação de Aplicativos. É um conjunto de rotinas e padrões de programação para acesso a um aplicativo de software ou plataforma baseado na Web.
+                      
+                      1.1.5. INFORMAÇÕES: entende-se todas as informações do LICENCIADO relacionadas a INFORMAÇÕES PESSOAIS, INFORMAÇÕES FINANCEIRAS e INFORMAÇÕES DE CONTA.
+                      
+                      1.1.6. TUCL: Termo de Uso e Contrato de Licença.
+                      
+                      1.1.7. SUPORTE: é o serviço de suporte técnico disponibilizado ao LICENCIADO;
+                      
+                      1.1.8. ERPSOFT: software desenvolvido e registrado em nome da OTIMIZY SISTEMAS, que possibilita o controle e o gerenciamento das informações e dados internos de empresas, com acesso remoto via rede mundial de computadores, por meio de por meio de dispositivos próprios, cuja responsabilidade são do LICENCIADO;
+                      
+                      1.1.9. LEI DE PROTEÇÃO DE DADOS: leis e regulamentos relacionados ao processamento e proteção de dados pessoais aplicáveis no país onde a LICENCIANTE está estabelecida;
+                      
+                      1.1.10. OTIMIZY: pessoa jurídica, desenvolvedora de sistemas detentora de todos os direitos do SOFTWARE.
+                      
+                      2. Do Objetivo
+                      
+                      2.1. Este Termo de Uso e Contrato de Licença (“TUCL”) é um acordo legal entre o LICENCIADO e LICENCIANTE para uso do programa de computador denominado ERPSOFT, disponibilizado neste ato pela LICENCIANTE por meio do site “erpsoft.com.br”, determinado pelo LICENCIADO no ato do licenciamento do SOFTWARE, compreendendo o programa de computador e podendo incluir os meios físicos associados, bem como quaisquer materiais impressos e qualquer documentação online ou eletrônica. Ao utilizar o SOFTWARE, mesmo que parcialmente ou a título de teste, o LICENCIADO estará vinculado aos termos deste TUCL, concordando com suas disposições, principalmente com relação ao CONSENTIMENTO PARA o ACESSO, COLETA, USO, ARMAZENAMENTO, TRATAMENTO E TÉCNICAS DE PROTEÇÃO ÀS INFORMAÇÕES do LICENCIADO pela LICENCIANTE, necessárias para a integral execução das funcionalidades ofertadas pelo SOFTWARE. Em caso de discordância com os termos aqui apresentados, a utilização do SOFTWARE deve ser imediatamente interrompida pelo LICENCIADO, devendo ser comunicada a imediatamente a licenciante.
+                      
+                      3. Do serviço
+                      
+                      3.1. O serviço oferecido pela LICENCIANTE, objeto deste Termo de Uso e Contrato de Licença (“TUCL”), consiste na coleta e gestão de informações obtidas na internet por meio do CNPJ do LICENCIADO, em especial aos dados e arquivos (xml) emitidos em face do CNPJ do LICENCIADO em órgãos públicos.
+                      
+                      4. Da Propriedade Intelectual
+                      
+                      4.1. O LICENCIADO não adquire, pelo presente instrumento, nenhum direito de propriedade intelectual ou outros direitos exclusivos, incluindo patentes, desenhos, marcas ou quaisquer direitos sobre informações confidenciais ou segredos de negócio, relacionados ao SOFTWARE ou parte dele. O LICENCIADO também não adquire nenhum direito sobre ou relacionado ao SOFTWARE ou qualquer componente dele, além dos direitos expressamente licenciados sobre esse TUCL.
+                      
+                      4.2. Todo o conteúdo do SOFTWARE será de propriedade exclusiva da LICENCIANTE, exceto as informações incluídas no SOFTWARE pelo próprio LICENCIADO.
+                      
+                      4.3. É concedido ao LICENCIADO os serviços e direitos de uso do SOFTWARE em caráter não permanente, não exclusivo e com vigência atrelada a esse TUCL.
+                      
+                      4.4. Também será de propriedade exclusiva da LICENCIANTE, ou a esta devidamente licenciado, todo o conteúdo disponibilizado no site, incluindo, mas não se limitando a textos, gráficos, imagens, logos,ícones, fotografias, conteúdo editorial, notificações, softwares e qualquer outro material.
+                      
+                      5. Declarações do LICENCIADO
+                      
+                      5.1. O LICENCIADO declara ter pleno conhecimento dos direitos e obrigações decorrentes do presente TUCL, constituindo o instrumento de acordo completo entre as partes. Declara, também, ter lido, compreendido e aceitado todos os termos e condições deste TUCL.
+                      
+                      5.2. O LICENCIADO declara que leu, compreendeu e aceitou a política de privacidade, consentindo livre e expressamente às ações de coleta, uso, armazenamento e tratamento das referidas informações e dados, tudo de acordo com a legislação vigente à época.
+                      
+                      5.3. O LICENCIADO declara estar ciente de que as operações que correspondam à aceitação do presente TUCL, de determinadas condições e opções, bem como eventual rescisão do presente instrumento e demais alterações, serão registradas nos bancos de dados da LICENCIANTE, juntamente com a data e hora em que foram realizadas pelo LICENCIADO, podendo tais informações serem utilizadas como prova pelas partes, independentemente do cumprimento de qualquer outra formalidade.
+                      
+                      5.4. O LICENCIADO declara que está ciente de que, em qualquer hipótese, deve atender rigorosamente a legislação, especialmente no que se refere às suas obrigações tributárias, fiscais, trabalhistas e previdenciárias, seja de natureza principal ou acessória, bem como cumprir a regulação de proteção de dados aplicável e quaisquer outras, entendendo que o SOFTWARE objeto deste TUCL trata-se de uma condição de meio e não de resultado, não dispensando, portanto, a correta alimentação das informações e parametrizações necessárias pelo LICENCIADO com base na legislação em vigor.
+                      
+                      5.5. O LICENCIADO poderá acessar aplicativo de terceiros através de API’s de conexão com a finalidade de compartilhar suas Informações ou por meio de download sobre determinados Aplicativos Terceiros. O LICENCIADO compreende e concorda que tais Informações poderão ser atribuídas à sua conta no Aplicativo de Terceiros e poderão ser publicadas em tal serviço. Embora essas informações possam ser automaticamente compartilhadas por definição, o LICENCIADO poderá, a qualquer tempo, suspender o compartilhamento ou quando for o caso desinstalar tais Aplicativos Terceiros. O Aplicativo de Terceiros também poderá fornecer controles semelhantes, porém o acesso deverá ser feito diretamente através do Aplicativo de Terceiros, objetivando suspender tal acesso.
+                      
+                      5.6. O LICENCIADO compreende e concorda que o uso de suas Informações por um Aplicativo de Terceiros coletadas junto ao mesmo (ou conforme autorizado pelo LICENCIADO) é regido pelas políticas de privacidade do Aplicativo de Terceiros e por suas configurações no respectivo serviço, e o uso de tais informações por parte do LICENCIADO é regido por este Termo de Uso e pelas configurações da sua conta no SOFTWARE da LICENCIANTE. A LICENCIANTE não será responsável, sob qualquer hipótese, pelo tratamento dado pelas informações por um Aplicativo Terceiro.
+                      
+                      5.7. O LICENCIADO declara ainda que está ciente de que para usufruir de algumas das funcionalidades do SOFTWARE, deverá disponibilizar à LICENCIANTE as INFORMAÇÕES DE CONTA para que o SOFTWARE, de maneira automatizada, colete informações diretamente nos sites e/ou outros meios virtuais disponibilizados pelas instituições financeiras, com as quais mantenha relacionamento, agindo a LICENCIANTE, neste caso, como representante e mandatária do LICENCIADO nestes atos.
+                      
+                      5.8. Compartilhamos informações relacionadas aos nossos usuários com terceiros selecionados que nos fornecem uma variedade de serviços que suportam a entrega dos nossos serviços (chamaremos eles de “Processadores Terceirizados”). Esses Processadores Terceirizados variam de fornecedores de infraestrutura técnica a serviço de atendimento ao LICENCIADO e ferramentas de autenticação. Asseguramos que o gerenciamento de informações feito em nosso nome por Processadores Terceirizados será feito de acordo com termos contratuais, que requerem que essas informações sejam mantidas seguras, sejam processadas de acordo com as leis de proteção de dados vigente à época do contrato e usadas somente conforme instruímos e não para os propósitos dos Processadores Terceirizados (a menos que tenham a sua autorização).
+                      
+                      5.9. Processadores Terceirizados podem estar alocados ou processar suas informações fora do país onde você está baseado. Nos casos em que o nosso uso de Processadores Terceirizados envolver a transferência de dados pessoais nós tomaremos as medidas necessárias para garantir que os dados pessoais sejam devidamente protegidos.
+                      
+                      5.10. Os tipos de Processadores Terceirizados com os quais podemos compartilhar elementos dos seus dados pessoais incluem:
+                      
+                      5.11. Processadores de pagamento acionados por nós para armazenar ou gerenciar informações de pagamento com segurança, como detalhes de cartão de crédito ou débito.
+                      
+                      5.12. Fornecedores de gerenciamento de e-mail e ferramentas de distribuição, por exemplo, se você assinar o recebimento de newsletters do LICENCIANTE ou outras mensagens comerciais, gerenciaremos seu envio usando uma ferramenta terceirizada de distribuição de e-mail;
+                      
+                      5.13. Fornecedores de serviços de segurança e prevenção de fraudes. Por exemplo, usamos esses fornecedores para identificar agentes de software automatizado que podem prejudicar nossos serviços ou para prevenir o uso indevido de nossas APIs;
+                      
+                      5.14. Fornecedores de plataformas de software que nos ajudam na comunicação ou no fornecimento de serviços de atendimento ao LICENCIADO, por exemplo, gerenciamos e respondemos todas as mensagens enviadas por meio da nossa central de ajuda usando uma ferramenta terceirizada de gerenciamento de comunicações;
+                      
+                      5.15. Fornecedores relacionados ao sistema bancário;
+                      
+                      5.16. Fornecedores de serviços de armazenamento na nuvem online e outros serviços de TI essenciais; e
+                      
+                      5.17. Quando processarmos seus dados pessoais solicitaremos o seu consentimento, mas sempre que você optar por retirar a autorização, poderá exercer esse direito a qualquer momento usando a funcionalidade disponível no recurso respectivo do produto ou entrando em contato através do seguinte endereço eletrônico: suporte@otimizy.com.br. A partir do momento que você retira alguma autorização poderá ficar impedido de gerar automaticamente alguma atividade que era realizada de forma automatizada. Ao revogar seu consentimento, você não vai mais poder usar os serviços e recursos que exigem a coleta ou o uso das informações que coletávamos ou usávamos com base no consentimento.
+                      
+                      5.18. O LICENCIADO assume total responsabilidade por toda ou qualquer informação que tenha sido inserida por ele no SOFTWARE.
+                      
+                      6. Privacidade
+                      
+                      6.1. O LICENCIADO concede autorização para que a LICENCIANTE possa realizar a análise dos dados e informações disponibilizadas pelo LICENCIADO e armazenadas no SOFTWARE pelo LICENCIANTE.
+                      
+                      6.2. Fica vedado à LICENCIANTE utilizar e divulgar para quaisquer terceiros as informações sem prévia solicitação e autorização expressa do LICENCIADO.
+                      
+                      6.3. O LICENCIADO consente livre e expressamente que a LICENCIANTE utilize cookies apenas para controlar a audiência e a navegação em seu site e possibilitar a identificação de serviços segmentados e personalizados ao perfil do LICENCIADO. A LICENCIANTE garante que estas informações coletadas por meio de cookies serão estatísticas e não pessoais, bem como, que não serão utilizadas para propósitos diversos dos expressamente previstos neste TUCL, comprometendo-se a adotar todas as medidas necessárias a fim de evitar o acesso e o uso de tais informações por qualquer terceiros, sem a devida autorização.
+                      
+                      7. Do acesso ao software
+                      
+                      7.1. Este termo concede ao LICENCIADO uma licença revogável, onerosa, não exclusiva e intransferível de uso do software, sendo certo que o LICENCIADO não poderá utilizar e nem permitir o uso do software para qualquer outra finalidade não expressamente prevista neste TUCL.
+                      
+                      7.2. Por meio do software o LICENCIADO, poderá efetuar as emissões documentos fiscais como Nota Fiscal Eletrônica e Cupom Fiscal Eletrônico.
+                      
+                      7.3. O LICENCIADO é o responsável pela veracidade, validade e precisão das informações por ele fornecidas no seu cadastro, inclusive em relação à indicação de endereço de e-mail válido e de sua titularidade, competindo-lhe, ainda, manter o referido cadastro sempre atualizado.
+                      
+                      7.4. A LICENCIANTE não terá qualquer obrigação de policiar ou fiscalizar as informações fornecidas pelo LICENCIADO.
+                      
+                      7.5. O login e senha criados pelo LICENCIADO para acesso ao SOFTWARE são confidenciais e de responsabilidade exclusiva do LICENCIADO, que deverá entrar em contato com a OTIMIZY, imediatamente, na hipótese de comprometimento do seu sigilo.
+                      
+                      7.6. Em nenhuma hipótese, o LICENCIADO terá acesso ao código fonte do software, por este se tratar de propriedade intelectual da Otimizy.
+                      
+                      8. Limitações de uso e Obrigações do LICENCIADO
+                      
+                      8.1. O LICENCIADO não poderá, em hipótese alguma:
+                      
+                      8.1.1. Empregar softwares, técnicas e/ou artifícios com o intuito de utilizar indevidamente o Software para práticas nocivas ao SOFTWARE ou aos seus usuários, tais como exploits, spamming, flooding, spoofing, crashing, root kits, etc.;
+                      
+                      8.1.2. Reproduzir, adaptar, modificar e/ou empregar, total ou parcialmente, para qualquer fim, o Software sem prévia autorização expressa da OTIMIZY;
+                      
+                      8.1.3. Utilizar o Software de qualquer forma que possa implicar em ato ilícito, infração, violação de direitos ou danos à LICENCIANTE ou terceiros, incluindo, mas não limitando ao uso para invasão de dispositivo informático com o objetivo de obter, adulterar ou destruir dados ou informações sem a autorização expressa do titular de tais dados ou do dispositivo ou servidor nos quais estes estejam armazenados;
+                      
+                      8.1.4. Copiar, ceder, sublicenciar, vender ou locar, reproduzir, doar, gratuita ou onerosamente, provisória ou permanentemente o Software, assim como partes, manuais ou informações relativas ao mesmo;
+                      
+                      8.1.5. Publicar ou transmitir qualquer arquivo que contenha vírus, worms, cavalos de tróia ou qualquer outro programa contaminante ou destrutivo que possa interferir no funcionamento do Software; e,
+                      
+                      8.1.6. Realizar engenharia reversa.
+                      
+                      8.2. Obriga-se o LICENCIADO a:
+                      
+                      8.2.1. Manter pessoal treinado para a operação do SOFTWARE e para a comunicação com a LICENCIANTE e prover, sempre que ocorrerem quaisquer problemas com o SOFTWARE, toda a documentação, relatórios e demais informações que relatem as circunstâncias em que os problemas ocorreram, objetivando facilitar e agilizar os trabalhos;
+                      
+                      8.2.2. Manter linha de telecomunicação, modem, internet, programa de comunicação, endereço de correio eletrônico e outros recursos necessários à comunicação com a LICENCIANTE;
+                      
+                      8.2.3. Responder pelas informações inseridas no sistema, pelo cadastramento, permissões, senhas e modo de utilização de seus usuários;
+                      
+                      8.2.4. Responsabilizar-se pelo conteúdo exclusivo de uso sobre o SOFTWARE, incluindo a designação das pessoas e funcionários do LICENCIANTE que terão acesso aos seus dados e informações no SOFTWARE, não sendo, portanto, estas informações revisadas em momento algum;
+                      
+                      8.2.5. Certificar-se de que não está proibido por determinação legal e/ou contratual de passar INFORMAÇÕES, INFORMAÇÕES FINANCEIRAS, INFORMAÇÕES DE CONTA e INFORMAÇÕES PESSOAIS, bem como quaisquer outros dados à LICENCIANTE, necessários para a execução do serviço oferecido por este TUCL;
+                      
+                      8.2.6. Garantir a regularidade dos dados pessoais inseridos no SOFTWARE, em especial, no que tange ao cumprimento de bases legais e direitos dos titulares de dados;
+                      
+                      8.2.7. A qualquer tempo a LICENCIANTE poderá bloquear acesso ao SOFTWARE caso constate qualquer prática pelo LICENCIADO ou terceiros de violação ao presente Termo de uso e/ou qualquer tentativa de fraude ou dê a entender tratar-se de uma tentativa, não reduzindo essa ação a responsabilidade do LICENCIADO sobre seus atos;
+                      
+                      8.2.8. Informar a LICENCIANTE sempre que houver qualquer alteração das INFORMAÇÕES fornecidas à esta e que possam impedir, limitar ou prejudicar o acesso da LICENCIANTE às INFORMAÇÕES necessárias para a execução das funcionalidades ofertadas pelo SOFTWARE;
+                      
+                      8.2.9. Atender rigorosamente a legislação brasileira e toda obrigação legal imposta e/ou decorrente de sua atividade e em razão da utilização deste SOFTWARE;
+                      
+                      9. Das obrigações da LICENCIANTE
+                      
+                      9.1. Obriga-se a LICENCIANTE a:
+                      
+                      9.1.1. A LICENCIANTE garante ao LICENCIADO que o SOFTWARE deverá funcionar regularmente, se respeitadas as condições de uso definidas na documentação. Na ocorrência de falhas de programação (“bugs”), a LICENCIANTE obrigar-se-á a corrigir tais falhas;
+                      
+                      9.1.2. A LICENCIANTE manterá atualizada as funções existentes no SOFTWARE com relação às variáveis normalmente alteradas pela legislação federal. A interpretação legal das normas editadas pelo governo será efetuada com base no entendimento majoritário dos “usuários” do SOFTWARE, doutrinadores e jurisprudência pátria. Ficam excluídas da manutenção as alterações no SOFTWARE originárias de obrigações assumidas pelo LICENCIADO junto a sindicatos ou associações, tais como convenções coletivas de trabalho e outras, bem como necessidades específicas de certos segmentos, além do atendimento de legislações municipais e/ou estaduais.
+                      
+                      9.1.3. Fornecer, ato contínuo ao aceite deste TUCL, acesso ao SOFTWARE durante a vigência deste TUCL;
+                      
+                      9.1.4. Suspender o acesso ao SOFTWARE do LICENCIADO que esteja desrespeitando as regras de conteúdo aqui estabelecidas ou as normas legais em vigor;
+                      
+                      9.1.5. Alterar as especificações e/ou características do SOFTWARE para a melhoria e/ou correções de erros;
+                      
+                      9.1.6. Disponibilizar acesso aos serviços de suporte compreendido de segunda a sexta-feira das 8h às 12h e das 13:15h às 18h (pelo horário de Brasília), via endereço eletrônico (suporte@otimizy.com.br);
+                      
+                      9.1.7. Armazenar e disponibilizar as informações do LICENCIADO, relacionadas ao conteúdo oriundo da utilização do SOFTWARE.
+                      
+                      9.1.8. Manter as INFORMAÇÕES FINANCEIRAS, INFORMAÇÕES DE CONTA e INFORMAÇÕES PESSOAIS do LICENCIADO, bem como seus registros de acesso, em sigilo, sendo que as referidas INFORMAÇÕES serão armazenadas em ambiente seguro, sendo respeitadas a intimidade, a vida privada, a honra e a imagem do LICENCIADO, em conformidade com as disposições da Lei nº 12.965/2014. A LICENCIANTE não será responsável pelo armazenamento de informações excluídas pelo LICENCIADO.
+                      
+                      9.1.9. A LICENCIANTE será responsável pela definição dos meios de tratamento de dados pessoais e fornecer informações sobre esses meios ao LICENCIADO, especificamente para permitir que LICENCIADO possa elaborar registros e informar aos Titulares dos Dados conforme exigido pela Legislação de Proteção de Dados aplicável.
+                      
+                      9.1.10. A LICENCIANTE pode coletar e processar os dados pessoais somente dentro da estrutura deste TERMO DE USO para melhorar e atualizar esses serviços, não sendo responsável pelo cumprimento de nenhuma Lei de Proteção de Dados aplicável ao LICENCIADO ou ao setor dele que não seja geralmente aplicável à LICENCIANTE .
+                      
+                      9.1.11. Por meio do presente TERMO DE USO, a LICENCIANTE reconhece expressamente que deve processar os Dados Pessoais somente para o fornecimento dos serviços do SOFTWARE, bem como para a melhoria e atualização do referido software.
+                      
+                      9.1.12. A LICENCIANTE será responsável pela implementação de medidas de segurança para o tratamento de dados pessoais no âmbito do SOFTWARE e tomará as medidas técnicas e organizativas apropriadas, destinadas a proteger os dados pessoais do LICENCIADO contra uso indevido e perda, ou contra qualquer outra violação de proteção de dados, de acordo com as Leis de Proteção de Dados aplicáveis.
+                      
+                      9.1.13. Em caso de violação de proteção de dados, a LICENCIANTE poderá auxiliar, caso requisitada, o LICENCIADO a fornecer todas as informações necessárias a que tenha acesso, a fim de permitir que o LICENCIADO cumpra suas obrigações. A LICENCIANTE informará ao LICENCIADO, sem demora indevida, em caso de qualquer violação dos Dados Pessoais do LICENCIADO descoberta pela LICENCIANTE.
+                      
+                      9.1.14. Os dados pessoais tratados no âmbito do SOFTWARE são geralmente retidos até que a) sejam excluídos pelo LICENCIADO ou pelos Usuários do SOFTWARE, ou b) um período de retenção tenha expirado, ou c) o Termo de Uso do Otimizy seja encerrado.
+                      
+                      9.1.15. O LICENCIADO não pode exigir a exclusão de Dados Pessoais, uma vez que uma Lei ou regras aplicáveis exija que a LICENCIANTE mantenha materiais que contenham esses Dados Pessoais. Quando a LICENCIANTE precisar reter Dados Pessoais por tais razões, seu processamento será restrito pela LICENCIANTE, ou terceiros por ela contratados, até que o período de retenção aplicável tenha expirado. Além disso, o tratamento dos Dados Pessoais será restrito em vez de excluir os Dados Pessoais, na extensão legalmente permitida pela Lei de Proteção de Dados Aplicáveis, em particular, se a exclusão não for razoavelmente viável ou se for somente possível com um custo desproporcional devido ao tipo específico de armazenamento. O LICENCIADO reconhece e aceita que algumas solicitações podem resultar em reivindicações de remuneração adicionais para a LICENCIANTE. A LICENCIANTE informará o LICENCIADO antes de executar a solicitação.
+                      
+                      9.1.16. A LICENCIANTE será responsável por atender às solicitações do LICENCIADO para correção, exclusão, restrição e disponibilização de Dados Pessoais durante a vigência e no término do Contrato.
+                      
+                      9.1.17. Caso a LICENCIANTE receba uma solicitação para o exercício de direitos de um Titular de Dados conforme a Lei de Proteção de Dados Aplicável, a LICENCIANTE encaminhará essa solicitação ao LICENCIADO, que instruirá a LICENCIANTE sem atrasos indevidos sobre como proceder. O LICENCIADO reconhece que, em caso de conflito entre o Titular de Dados e o LICENCIADO, a legislação aplicável pode forçar a LICENCIANTE a atender à solicitação do Titular dos Dados com relação à objeção do LICENCIADO. A LICENCIANTE, entretanto, não tomaria essa medida sem a devida consideração da situação legal juntamente com o LICENCIADO.
+                      
+                      9.1.18. O LICENCIADO por meio da proteção de dados confirma e reconhece que, caso solicite à LICENCIANTE a exclusão dos Dados Pessoais ou a restrição de seu tratamento, pode tornar impossível o fornecimento dos produtos ou dos serviços fornecidos ou contratados. A LICENCIANTE notificará o LICENCIADO sobre tal consequência antes da execução de tal solicitação.
+                      
+                      9.1.19. Ao observar que não pode tratar Dados Pessoais conforme as Instruções do LICENCIADO devido a uma exigência prevista em qualquer lei aplicável, a LICENCIANTE: (i) comunicará imediatamente o LICENCIADO acerca de tal exigência legal obedecendo ao limite permitido pela lei aplicável; e (ii) quando necessário, interromperá todo o Tratamento (exceto o mero armazenamento e manutenção da segurança dos Dados Pessoais afetados), até o momento em que o LICENCIADO emitir novas Instruções que possam ser cumpridas pela LICENCIANTE. Caso a presente disposição seja invocada, a LICENCIANTE não será responsabilizada perante o LICENCIADO nos termos do Acordo por não prestar os Serviços de Assinatura aplicáveis devidos até o momento em que o LICENCIADO emitir novas Instruções lícitas sobre o Tratamento.
+                      
+                      10. Nível de Serviço
+                      
+                      10.1. O LICENCIADO poderá acompanhar regularmente a disponibilidade do sistema mediante o envio de um e-mail para suporte@otimizy.com.br;
+                      
+                      10.2. O compromisso de nível de serviço não se aplica às circunstâncias de indisponibilidade que resultem:
+                      
+                      10.2.1. De uma interrupção do fornecimento de energia elétrica ou paradas emergenciais não superiores a 2 (duas) horas ou que ocorram no período das 24h às 6:00h (horário de Brasília);
+                      
+                      10.2.2. Forem causadas por fatores que fujam ao razoável controle da LICENCIANTE, inclusive casos de força maior ou de acesso à internet e problemas correlatos do LICENCIADO;
+                      
+                      10.2.3. Resultem de quaisquer atos de omissões do LICENCIADO ou de terceiros;
+                      
+                      10.2.4. Resultem do equipamento, software ou outras tecnologias que o LICENCIADO usar que impeçam o acesso regular do Software;
+                      
+                      10.2.5. Resultem de falhas de instâncias individuais não atribuíveis à indisponibilidade do LICENCIADO;
+                      
+                      10.2.6. Resultem de práticas de gerenciamento da rede que possam afetar sua qualidade;
+                      
+                      10.2.7. Resultem da dificuldade de acesso devido à perda de login e senha.
+                      
+                      11. Isenção de Responsabilidade da LICENCIANTE
+                      
+                      11.1. A LICENCIANTE não se responsabiliza:
+                      
+                      11.1.1. Por falha de operação, operação por pessoas não autorizadas ou qualquer outra causa em que não exista culpa da LICENCIANTE;
+                      
+                      11.1.2. Pelo cumprimento dos prazos legais do LICENCIADO para a entrega de documentos fiscais ou pagamentos de impostos;
+                      
+                      11.1.3. Pelos danos ou prejuízos decorrentes de decisões administrativas, gerenciais ou comerciais tomadas com base nas informações fornecidas pelo SOFTWARE.
+                      
+                      11.1.4. Por problemas definidos como “caso fortuito” ou “força maior”, contemplados pelo Art. 393 do Código Civil Brasileiro;
+                      
+                      11.1.5. Por eventuais problemas oriundos de ações de terceiros que possam interferir na qualidade do serviço;
+                      
+                      11.1.6. Por danos causados a terceiros em razão de conteúdo gerado pelo LICENCIANTE através de SOFTWARE;
+                      
+                      11.1.7. Pela indisponibilidade ou lentidão de aplicativos terceiros que se conectam com o SOFTWARE por meio de API ou ainda, de fornecedores de telecomunicação do LICENCIADO;
+                      
+                      11.1.8. Por revisar as INFORMAÇÕES DE CONTA fornecidas pelo LICENCIADO, bem como as INFORMAÇÕES FINANCEIRAS obtidas junto aos sites e/ou meios virtuais das instituições financeiras, seja no que tange à precisão dos dados, seja quanto à legalidade ou ameaça de violação em função do fornecimento destas informações;
+                      
+                      11.1.9. Por quaisquer produtos e/ou serviços oferecidos por meio dos sites e/ou meios virtuais das instituições financeiras, ainda que de maneira solidária ou subsidiária;
+                      
+                      11.1.10. Por eventuais infrações legais cometidas pelo LICENCIADO, de ordem fiscal, tributária, trabalhista, previdenciária, criminal, ou qualquer outra.
+                      
+                      11.1.11. Pela geração e envio de obrigações fiscais acessórias, cabendo este procedimento somente ao LICENCIADO.
+                      
+                      11.1.12. O acesso às INFORMAÇÕES DE CONTA e às INFORMAÇÕES FINANCEIRAS do LICENCIADO dependem de serviços prestados pelas instituições financeiras. Sendo assim, a LICENCIANTE não assume qualquer responsabilidade quanto à qualidade, precisão, pontualidade, entrega ou falha na obtenção das referidas INFORMAÇÕES junto aos sites e/ou meios virtuais das instituições financeiras.
+                      
+                      11.1.13. A LICENCIANTE adota as medidas de segurança adequadas de acordo com os padrões de mercado para a proteção das INFORMAÇÕES do LICENCIADO armazenadas no SOFTWARE, assim como para o acesso às INFORMAÇÕES FINANCEIRAS do LICENCIADO. Contudo, o LICENCIADO reconhece que nenhum sistema, servidor ou software está absolutamente imune a ataques e/ou invasões de hackers e outros agentes maliciosos, não sendo a LICENCIANTE responsável por qualquer exclusão, obtenção, utilização ou divulgação não autorizada de INFORMAÇÕES resultantes de ataques que a LICENCIANTE não poderia razoavelmente evitar por meio dos referidos padrões de segurança.
+                      
+                      11.1.14. Conforme o uso do SOFTWARE pelo LICENCIADO, este pode sugerir naturezas de operações ou os impostos de acordo com o histórico de uso, especialmente na utilização das funcionalidades de configuração tributária e Automatização de Impostos. A LICENCIANTE não se responsabiliza pelo aceite e pelo preenchimento incorreto dessas informações, cabendo somente ao LICENCIADO a checagem correta de suas próprias informações inseridas, sendo necessário ao LICENCIADO sempre revisar as regras de automatização de impostos e configuração tributária com um profissional de contabilidade, considerando que o SOFTWARE oferece sugestões com base em histórico de regras de tributação conforme legislação, sendo responsabilidade exclusiva do LICENCIADO a conferência das informações de suas notas fiscais e se houve alteração de alíquotas conforme legislação tributária vigente. A LICENCIANTE ressalta que o LICENCIADO poderá revisar e atualizar as regras de configuração tributária e Automatização de Impostos a qualquer tempo para se adequar à legislação vigente. Caso as informações sejam inseridas pelo CONTADOR do LICENCIADO, mediante autorização do LICENCIADO, o CONTADOR será responsável pela veracidade das informações bem como pela conferência das alíquotas aplicáveis e adequação à legislação vigente.
+                      
+                      12. Da Retomada dos Softwares
+                      
+                      12.1. A LICENCIANTE se reserva o direito de cancelar imediatamente o acesso do LICENCIADO ao SOFTWARE nos casos em que o LICENCIADO usar o SOFTWARE de forma diversa daquela estipulada no presente instrumento
+                      
+                      13. Das Garantias Limitadas
+                      
+                      13.1. Na extensão máxima permitida pela lei em vigor, o SOFTWARE é fornecido “no estado em que se encontra” e “conforme a disponibilidade”, com todas as falhas e sem garantia de qualquer espécie.
+                      
+                      13.2. A LICENCIANTE não garante que as funções contidas no SOFTWARE atendam às suas necessidades, que a operação do SOFTWARE será ininterrupta ou livre de erros, que qualquer serviço continuará disponível, que os defeitos no SOFTWARE serão corrigidos ou que o SOFTWARE será compatível ou funcione com qualquer SOFTWARE, aplicações ou serviços de terceiros.
+                      
+                      13.3. Além disso, o LICENCIADO reconhece que o SOFTWARE não deve ser utilizado ou não é adequado para ser utilizado em situações ou ambientes nos quais a falha ou atrasos, os erros ou inexatidões de conteúdo, dados ou informações fornecidas pelo SOFTWARE possam levar à morte, danos pessoais, ou danos físicos ou ambientais graves, incluindo, mas não se limitando, à operação de instalações nucleares, sistemas de navegação ou de comunicação aérea, controle de tráfego aéreo, sistemas de suporte vital ou de armas.
+                      
+                      14. Limitação de Responsabilidade
+                      
+                      14.1. Em nenhum caso a LICENCIANTE será responsável por danos pessoais ou qualquer prejuízo incidental, especial, indireto ou consequente, incluindo, sem limitação, prejuízos por perda de lucro, corrupção ou perda de dados, falha de transmissão ou recepção de dados, não continuidade do negócio ou qualquer outro prejuízo ou perda comercial, decorrentes ou relacionados ao seu uso ou sua inabilidade em usar o SOFTWARE, por qualquer outro motivo. Sob nenhuma circunstância a responsabilidade integral da LICENCIANTE com relação ao LICENCIADO por todos os danos excederá a quantia correspondente ao último plano de licenciamento pago pelo LICENCIADO à LICENCIANTE pela obtenção da presente licença de SOFTWARE.
+                      
+                      15. Consentimento livre, expresso e informado para acesso a informações confidenciais e dados pessoais
+                      
+                      15.1. O LICENCIADO, ao aceitar utilizar o SOFTWARE, além de aceitar integralmente este “TUCL”, também consente, livre e expressamente, que a LICENCIANTE colete, use, armazene e faça o tratamento de suas INFORMAÇÕES, incluindo seus dados pessoais, financeiros, bancários, de conta, os quais serão necessários para que o serviço ofertado seja prestado em sua integralidade.
+                      
+                      15.2. Para tanto, o LICENCIADO consente, livre e expressamente, em fornecer os dados que permitam o acesso às INFORMAÇÕES necessárias para que o SOFTWARE execute todas as funções para as quais foi projetado.
+                      
+                      15.3. Ainda, o LICENCIADO declara e reconhece que para a prestação dos serviços e funcionalidades de integração a rede bancária ofertadas pelo SOFTWARE, a LICENCIANTE acessa INFORMAÇÕES FINANCEIRAS diretamente no site e/ou outros meios virtuais das instituições financeiras, sem fazer qualquer emulação de medidas de segurança, utilizando-se apenas das INFORMAÇÕES PESSOAIS, INFORMAÇÕES DE CONTA, bem como outras eventualmente necessárias, fornecidas pelo LICENCIADO, conforme autorizado.
+                      
+                      15.4. O LICENCIADO, por meio deste TUCL e fornecendo as INFORMAÇÕES DE CONTA, autoriza e consente expressamente que a LICENCIANTE acesse suas INFORMAÇÕES DE CONTA e INFORMAÇÕES FINANCEIRAS na qualidade de mandatária.
+                      
+                      15.5. A LICENCIANTE declara que todas as INFORMAÇÕES DE CONTA serão utilizadas única e exclusivamente para a visualização das informações financeiras nos sites e/ou meios virtuais das instituições financeiras, sendo absolutamente vedada a LICENCIANTE a realização de quaisquer transações.
+                      
+                      15.6. O LICENCIADO consente que, ao acessar o site da LICENCIANTE, esta poderá coletar informações técnicas de navegação, tais como tipo de navegador do computador utilizado para acesso ao site, endereço de protocolo de Internet, páginas visitadas e tempo médio gasto no site. Tais informações poderão ser usadas para orientar o próprio LICENCIADO e melhorar os serviços ofertados.
+                      
+                      15.7. O LICENCIADO consente livre e expressamente que suas INFORMAÇÕES poderão ser transferidas a terceiros em decorrência da venda, aquisição, fusão, reorganização societária ou qualquer outra mudança no controle da LICENCIANTE. A LICENCIANTE, contudo, compromete-se, nestes casos, a informar o LICENCIADO.
+                      
+                      15.8. O LICENCIADO consente livre e expressamente que a LICENCIANTE utilize cookies apenas para controlar a audiência e a navegação em seu site e possibilitar a identificação de serviços segmentados e personalizados ao perfil do LICENCIADO. A LICENCIANTE garante que estas informações coletadas por meio de cookies são estatísticas e não pessoais, bem como que não serão utilizadas para propósitos diversos dos expressamente previstos neste TUCL, comprometendo-se a adotar todas as medidas necessárias a fim de evitar o acesso e o uso de tais informações por quaisquer terceiros, sem a devida autorização.
+                      
+                      15.9. Válido somente para LICENCIADOS conectados a um contador
+                      
+                      15.9.1.Com o intuito de facilitar a comunicação e o tráfego de informações entre o LICENCIADO e seu contador, diminuir entraves burocráticos e margens de erro na entrega das informações contábeis, a plataforma da LICENCIANTE permite a liberação pelo LICENCIADO de acesso direto ao SOFTWARE para seu contador, permite que sejam exportadas informações para integrar com o sistema contábil que utiliza. A conexão acontece com o consentimento do LICENCIADO, quando este informa o e-mail do contador e envia a ele um convite para o acesso ao seu sistema.
+                      
+                      16. Da remuneração e forma de pagamento
+                      
+                      16.1. O LICENCIANTE concede ao LICENCIADO, de maneira gratuita, os Serviços e o acesso ao software, pelo prazo estipulado em www.erpsoft.com.br contados a partir da data de aceitação do presente TUCL, este denominado período de teste.
+                      
+                      16.2. Após finalizado o período de teste, ou mesmo durante o decorrer do referido prazo, o LICENCIADO se reserva no direito de, a seu critério, continuar ou não com o uso do SOFTWARE, sem a incidência de qualquer multa rescisória.
+                      
+                      16.3. Após finalizado o período de teste, se o LICENCIADO desejar continuar com a utilização do SOFTWARES, o mesmo deverá pagar, antecipadamente, ou seja, de forma pré-paga, à LICENCIANTE o valor do respectivo plano escolhido e apresentado em www.erpsoft.com.br.
+                      
+                      16.4. Caso o LICENCIADO, no decorrer da vigência do presente instrumento, opte por outro plano de licenciamento superior (upgrade), os valores serão alterados de acordo com o respectivo plano escolhido. Caso esta operação gere créditos eles serão utilizados nas próximas renovações, sendo vedada a devolução de valores já pagos que se transformaram em crédito por uma operação de alteração de plano ou de recorrência.
+                      
+                      16.5. Se o LICENCIADO, no decorrer da vigência do presente instrumento, optar por um plano de licenciamento inferior (downgrade), a alteração de valores será efetuada na próxima renovação, sendo vedada a devolução de valores já pagos
+                      
+                      16.6. Caso o LICENCIADO, opte pelos planos anuais, no caso de suspensão dos Serviços os valores pagos não serão devolvidos.
+                      
+                      16.7. A falta de pagamento de quaisquer valores nas respectivas datas de vencimento não acarretará na rescisão automática do TUCL, mas causará a suspensão do acesso do LICENCIADO ao SOFTWARE até que as pendências financeiras tenham sido regularizadas. O acesso ao SOFTWARE somente será restabelecido após a identificação pela LICENCIANTE do pagamento integral de todos os valores devidos enquanto o mesmo esteve suspenso. A identificação poderá ocorrer em até dois dias úteis após a data de pagamento pelo LICENCIADO. Caso o LICENCIADO não resolva a pendência financeira no prazo de 10 (dez) dias contados do vencimento do valor não pago, a LICENCIANTE se reserva o direito de rescindir o presente TUCL.
+                      
+                      16.8. Caso o LICENCIADO não resolva a pendência financeira no prazo de 90 (noventa) dias corridos, contados do vencimento do valor não pago, a LICENCIANTE se reserva ao de apagar de forma definitiva e irrecuperável todas as informações do LICENCIADO que por ventura estejam armazenadas no SOFTWARE.
+                      
+                      16.9. Os valores dos planos de licenciamento serão atualizados anualmente pelo IGPM-FGV acumulado no período, ou no caso de extinção deste, de outro índice oficial que venha a substituí-lo.
+                      
+                      16.10. Caso haja mudança de planos durante a vigência do contrato, as disposições e Valor do Plano atualizado serão atualizados de acordo com a modalidade de contratação realizada pelo LICENCIADO, sendo cobrada a diferença dos planos apenas no próximo mês de vigência.
+                      
+                      16.11. A LICENCIANTE poderá, a seu critério, por mera liberalidade, oferecer descontos nos valores dos planos de licenciamento. Neste caso, os descontos serão válidos por até 12 (doze) meses. A LICENCIANTE poderá renovar ou não os percentuais de desconto, podendo ainda cancelar os descontos após o período de validade, sem aviso prévio.
+                      
+                      17. Do Prazo
+                      
+                      17.1. O presente Contrato terá prazo de vigência indeterminado, podendo ser rescindido a qualquer tempo por ambas as Partes, mediante aviso prévio de 30 (trinta) dias; por meio de comunicação expressa à parte contrária; por meio do sistema e/ou e-mail.
+                      
+                      17.2. Em caso de tratamento desrespeitoso por parte dos LICENCIADO ou da LICENCIANTE aos funcionários; o presente contrato poderá ser rescindido de forma imediata, sem observar o aviso prévio.
+                      
+                      17.3. Caso o cancelamento seja feito antes do término de um período já pago, o encerramento da conta terá efeito imediato e o LICENCIADO não terá direito ao reembolso do período contratado.
+                      
+                      17.4. A infração por qualquer das partes de qualquer das disposições do presente instrumento ou das disposições legais e regulamentares a que o mesmo se subordina, faculta à parte lesada, a seu exclusivo critério, rescindir o presente instrumento, independente da comunicação prévia.
+                      
+                      17.5. A LICENCIANTE rescindirá imediatamente o SOFTWARE de um determinado LICENCIADO caso haja indícios de que referido LICENCIADO esteja utilizando o SOFTWARE para incitar ou cometer qualquer atitude ilegal ou que conduza a comportamento ilegal.
+                      
+                      18. Restituição das Informações
+                      
+                      18.1. Suspenso o acesso do LICENCIADO ao SOFTWARE, a LICENCIANTE manterá as informações do LICENCIADO armazenadas no SOFTWARE pelo período de 90 (noventa) dias, contados da suspensão de acesso. Durante este período, a LICENCIANTE tornará as informações do LICENCIADO disponíveis para serem extraídas do SOFTWARE em formato .csv.
+                      
+                      18.2. Conforme descrito na cláusula acima, passados 90 (noventa) dias da suspensão do acesso do LICENCIADO ao SOFTWARE, todas as INFORMAÇÕES do LICENCIADO, incluindo as INFORMAÇÕES PESSOAIS, INFORMAÇÕES DE CONTA e INFORMAÇÕES FINANCEIRAS, em poder da LICENCIANTE serão excluídos permanentemente do banco de dados da LICENCIANTE, independentemente de terem sido extraídas ou não pelo LICENCIADO.
+                      
+                      18.3. Não obstante o disposto acima, as informações referentes à data e hora de acesso e ao endereço de protocolo de internet utilizado pelo LICENCIADO para acessar o Site e o SOFTWARE permanecerão armazenadas pela LICENCIANTE por 6 (meses) a contar da data de cada acesso realizado, independentemente do término da relação jurídica e comercial entre a LICENCIANTE e o LICENCIADO, em cumprimento ao disposto no Artigo 15 da Lei nº 12.965/2014, podendo ser armazenados por um período maior de tempo mediante ordem judicial.
+                      
+                      19. Da Rescisão
+                      
+                      19.1. Ocorrerá ao final do período de testes.
+                      
+                      19.2. Ocorrerá, também, pela falta de pagamento dos valores devidos.
+                      
+                      19.3. O LICENCIADO poderá realizar a suspensão dos serviços prestados neste contrato a qualquer momento, desde que comunique à LICENCIANTE, por escrito, devendo pagar o saldo devedor.
+                      
+                      19.4. Caso o LICENCIADO decida rescindir este contrato antes do término do prazo, o LICENCIANTE não restituirá ao LICENCIADO o saldo restante do plano de licenciamento contrato. O valor será retido pela LICENCIANTE para cobrir os custos operacionais.
+                      
+                      20. Confidencialidade
+                      
+                      20.1. As Partes acordam que todas as informações inseridas no SOFTWARE, informações que forem transmitidas e ou recebidas do referido sistema, serão consideradas Confidenciais, não sendo permitido a quaisquer das partes a divulgação destas informações, ressalvados os casos de ordem ou determinação judicial de Autoridade Pública. Neste sentido, a LICENCIANTE informará imediatamente ao LICENCIADO acerca de tal situação de modo que esta possa contestar e ou adotar as medidas legais que entender necessárias à proteção das informações confidenciais.
+                      
+                      20.2. Não serão tratados como violação de confidencialidade as informações que estejam em domínio público à época que for desenvolvida ou fornecida;
+                      
+                      20.3. A LICENCIANTE não será responsável por violações dos dados e informações acima referidos resultantes de atos de funcionários, prepostos ou de pessoas autorizadas pela LICENCIADO, e nem daquelas resultantes da ação criminosa ou irregular de terceiros “hackers” fora dos limites da previsibilidade técnica do momento em que a mesma vier a ocorrer.
+                      
+                      21. Uso da Marca
+                      
+                      21.1. Ao contratar o SOFTWARE, o LICENCIADO autoriza a LICENCIANTE a divulgar sua marca como cliente no site do SOFTWARE e no site da LICENCIANTE, em anúncios nas várias mídias de mercado, reportagens, eventos, testemunhais, entre outras formas de divulgação, sem que isso represente qualquer infração a este contrato ou direito comercial, direito de imagem, ou de qualquer outra natureza, para o LICENCIADO.
+                      
+                      21.2. Caso o LICENCIADO prefira não ter sua marca divulgada nos termos acima, este deverá enviar comunicado formal e protocolado à LICENCIADA, que se comprometerá a não divulgar sua marca como cliente do SOFTWARE.
+                      
+                      22. Das disposições Legais
+                      
+                      22.1. O LICENCIADO não poderá prestar serviços a terceiros utilizando o SOFTWARE da LICENCIANTE sem autorização prévia e expressa da LICENCIANTE. A autorização de uso do SOFTWARE é fornecida por CNPJ. Desta forma, o SOFTWARE não pode operar sob o regime de multiempresa, necessitando para cada CNPJ uma licença específica;
+                      
+                      22.2. Caso o LICENCIADO venha a desenvolver um novo módulo ou produto que caracterize cópia, de todo ou em parte, quer seja do dicionário de dados quer seja do programa, será considerado como parte do SOFTWARE fornecido pela LICENCIANTE, ficando, portanto, sua propriedade incorporada pela LICENCIANTE e seu uso condicionado a estas cláusulas contratuais;
+                      
+                      22.3. Este TUCL obriga as partes e seus sucessores e somente o LICENCIADO possui licença não exclusiva para a utilização do SOFTWARE, sendo-lhe, entretanto, vedado transferir os direitos e obrigações acordados por este instrumento. Tal limitação, no entanto, não atinge a LICENCIANTE, que poderá, a qualquer tempo, ceder, no todo ou em parte, os direitos e obrigações inerentes ao presente TUCL;
+                      
+                      22.4. A tolerância de uma parte para com a outra quanto ao descumprimento de qualquer uma das obrigações assumidas neste instrumento não implicará em novação ou renúncia de direito. A parte tolerante poderá, a qualquer tempo, exigir da outra parte o fiel e cabal cumprimento deste instrumento;
+                      
+                      22.5. Não constitui causa de rescisão contratual o não cumprimento das obrigações aqui assumidas em decorrência de fatos que independam da vontade das partes, tais como os que configuram o caso fortuito ou força maior, conforme previsto no artigo 393 do Código Civil Brasileiro;
+                      
+                      22.6. Se qualquer disposição deste TUCL for considerada nula, anulável, inválida ou inoperante, nenhuma outra disposição deste TUCL será afetada como consequência disso e, portanto, as disposições restantes deste TUCL permanecerão em pleno vigor e efeito como se tal disposição nula, anulável, inválida ou inoperante não estivesse contida neste TUCL;
+                      
+                      22.7. Neste ato, o LICENCIANTE expressamente autoriza o LICENCIADO a colher e utilizar seus dados técnicos e operacionais presentes no SOFTWARE, para fins de estudos e melhorias no SOFTWARE;
+                      
+                      22.8. A LICENCIANTE poderá, a seu exclusivo critério, a qualquer tempo e sem a necessidade de comunicação prévia ao LICENCIADO:
+                      
+                      22.8.1. Encerrar, modificar ou suspender, total ou parcialmente, o acesso do LICENCIADO ao SOFTWARE, quando referido acesso ou cadastro estiver em violação das condições estabelecidas neste TUCL;
+                      
+                      22.8.2. Excluir, total ou parcialmente, as informações cadastradas pelo LICENCIADO que não estejam em consonância com as disposições deste TUCL;
+                      
+                      22.8.3. Acrescentar, excluir ou modificar o Conteúdo oferecido no site;
+                      
+                      22.8.4. Alterar quaisquer termos e condições deste TUCL mediante simples comunicação ao LICENCIADO.
+                      
+                      22.9. A LICENCIANTE ainda poderá, a seu exclusivo critério, suspender, modificar ou encerrar as atividades do SOFTWARE, mediante comunicação prévia ao LICENCIADO, com antecedência mínima de 15 (quinze) dias, disponibilizando formas e alternativas de extrair do Site as informações, salvo nas hipóteses de caso fortuito ou força maior.
+                      
+                      22.10. A LICENCIANTE poderá, por meio de comunicação ao endereço eletrônico indicado pelo LICENCIADO em seu cadastro ou por meio de aviso no Site, definir preços para a oferta de determinados conteúdos e/ou serviços, ainda que inicialmente tais serviços tenham sido ofertados de forma gratuita, sendo a utilização destes, após o referido aviso, considerada como concordância do LICENCIADO com a cobrança de tais preços.
+                      
+                      22.11. Fica certo e entendido pelo LICENCIADO que somente a pessoa cadastrada pelo próprio LICENCIADO como administradora de conta poderá solicitar que as informações do LICENCIADO inseridas no SOFTWARE sejam apagadas. Ainda, o LICENCIADO declara sua ciência de que uma vez apagadas, estas não poderão mais ser recuperadas, ficando a LICENCIANTE isenta de qualquer responsabilidade por quaisquer perdas ou danos decorrentes deste procedimento solicitado pelo LICENCIADO.
+                      
+                      23. Da Lei Aplicável
+                      
+                      23.1. Este TUCL será regido, interpretado e se sujeitará às leis brasileiras e, o LICENCIADO e a LICENCIANTE desde logo elegem, de forma irrevogável e irretratável, o foro da Comarca da Cidade de Garibaldi, Estado do Rio Grande do Sul, para dirimir quaisquer dúvidas ou controvérsias oriundas deste TUCL, com a exclusão de qualquer outro, por mais privilegiado que seja.
+                    </div>
+                    <div class="modal-footer">
+                      <div class="form-check position-absolute bottom-0 start-0">
+                        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required />
+                        <label class="form-check-label" for="invalidCheck3">Concorde com os termos e condições</label>
+                        <div class="invalid-feedback">Você deve concordar antes de enviar.</div>
+                      </div>
+                      <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">enviar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                      
+                                    
+           
+
+              <div class="col-12 text-center">
+                <button  type="button" class="btn btn-primary"><i class="bi bi-arrow-90deg-left"></i> voltar</button>
+                
+                <button type="submit" class="btn  btn btn-primary text-center m-4"> <i class="bi bi-send"></i> Enviar Cadastro</button>
+
+                <button   type="reset"  name="b2" value="Limpar"class="btn btn-outline-danger"><i class="bi bi-backspace"></i> Limpar Campos</button>
+              </div>
+            </form>
+        </div>  
+
+      <script>
+        $(document).ready(function(){
+
+              // Adicionamos o evento onclick ao botão com o ID "pesquisar"
+              $('#pesquisar').on('click', function(e) {
+                
+                // Apesar do botão estar com o type="button", é prudente chamar essa função para evitar algum comportamento indesejado
+                e.preventDefault();
+                
+                // Aqui recuperamos o cnpj preenchido do campo e usamos uma expressão regular para limpar da string tudo aquilo que for diferente de números
+                var cnpj = $('#cnpj').val().replace(/[^0-9]/g, '');
+                
+                // Fazemos uma verificação simples do cnpj confirmando se ele tem 14 caracteres
+                if(cnpj.length == 14) {
+                
+                  // Aqui rodamos o ajax para a url da API concatenando o número do CNPJ na url
+                  $.ajax({
+                    url:'https://www.receitaws.com.br/v1/cnpj/' + cnpj,
+                    method:'GET',
+                    dataType: 'jsonp', // Em requisições AJAX para outro domínio é necessário usar o formato "jsonp" que é o único aceito pelos navegadores por questão de segurança
+                    complete: function(xhr){
+                    
+                      // Aqui recuperamos o json retornado
+                      response = xhr.responseJSON;
+                      
+                      // Na documentação desta API tem esse campo status que retorna "OK" caso a consulta tenha sido efetuada com sucesso
+                      if(response.status == 'OK') {
+                      
+                        // Agora preenchemos os campos com os valores retornados
+                        $('#razao').val(response.nome);
+                        $('#nome').val(response.fantasia);
+                        $('#logradouro').val(response.logradouro);
+                      
+                      // Aqui exibimos uma mensagem caso tenha ocorrido algum erro
+                      } else {
+                        alert(response.message); // Neste caso estamos imprimindo a mensagem que a própria API retorna
+                      }
+                    }
+                  });
+                
+                // Tratativa para caso o CNPJ não tenha 14 caracteres
+                } else {
+                  alert('CNPJ inválido');
+                }
+              });
+              });
+      </script>
+    </main>
+    <!--footer-->
+    <footer>
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-muted">© 2022 AuroraOne tecnologia</p>
+      
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+      
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Produtos</a></li>
+          </ul>
+        </footer>
+      </div> 
+  </footer> 
+   <!-- end footer-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+</html>
